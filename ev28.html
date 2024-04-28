@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="ev28.css">
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    <div class="container">
+        
+        <div class="filters">
+            <p>Filter by Department:</p>
+            <select id="departmentFilter">
+                <option value="" selected>-- Select Department --</option>
+                <option value="hr">HR</option>
+                <option value="finance">Finance</option>
+                <option value="marketing">Marketing</option>
+                <option value="engineering">Engineering</option>
+                <option value="operations">Operations</option>
+            </select>
+            <p>Filter by Gender:</p>
+            <select id="genderFilter">
+                <option value="" selected>Female</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+            <p>sorted by Salary:</p>
+            <select id="salarySort">
+                <option value="" selected>Low to High</option>
+                <option value="asc">Low to High</option>
+                <option value="desc">High to Low</option>
+            </select>
+        </div>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody id="employeeBody">
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button id="prevBtn" disabled>&lt; Prev</button>
+            <button id="nextBtn">Next &gt;</button>
+        </div>
+    </div>
+
+    <script src="ev28.js"></script>
+</body>
+</html>
