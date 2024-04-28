@@ -72,15 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function applyFilters() {
-        currentFilterBy = departmentFilter.value || genderFilter.value;
-        currentFilterValue = currentFilterBy === "department" ? departmentFilter.value : genderFilter.value;
+        currentFilterBy = departmentFilter.value ? "department" : genderFilter.value ? "gender" : "";
+        currentFilterValue = departmentFilter.value || genderFilter.value || "";
         currentPage = 1;
         fetchData();
     }
 
     function applySort() {
-        currentSort = salarySort.value;
-        currentOrder = currentSort ? salarySort.value : "";
+        currentSort = salarySort.value ? "salary" : "";
+        currentOrder = salarySort.value;
         currentPage = 1;
         fetchData();
     }
